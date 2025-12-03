@@ -1,0 +1,61 @@
+/* Medical Theme - Structure & Layout */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Global Typography */
+html,
+body,
+[class*="css"] {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Sidebar Layout */
+[data-testid="stSidebar"] .css-17lntkn {
+    padding-top: 2rem;
+}
+
+/* Headers */
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+}
+
+/* Cards & Containers */
+[data-testid="stMetric"],
+.card,
+[data-testid="stDataFrame"] {
+    border-radius: 0.5rem;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top-width: 1px;
+    border-top-style: solid;
+    text-align: center;
+    font-size: 0.875rem;
+}

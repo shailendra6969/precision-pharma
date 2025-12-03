@@ -1,0 +1,85 @@
+/* Dark Mode Colors */
+
+/* Backgrounds */
+.stApp {
+    background-color: #0F1117;
+}
+
+[data-testid="stSidebar"] {
+    background-color: #0F1117;
+    border-right: 1px solid #2D3748;
+}
+
+/* Text Colors */
+html,
+body,
+[class*="css"],
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] label {
+    color: #E2E8F0;
+}
+
+h1,
+h2,
+h3 {
+    color: #90CDF4 !important;
+}
+
+h2 {
+    border-bottom-color: #2D3748;
+}
+
+/* Cards & Metrics */
+[data-testid="stMetric"],
+.card,
+[data-testid="stDataFrame"] {
+    background-color: #181A20;
+    border-color: #2D3748;
+    color: #E2E8F0;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #A0AEC0;
+}
+
+[data-testid="stMetricValue"] {
+    color: #E2E8F0;
+}
+
+/* Inputs */
+.stTextInput>div>div,
+.stSelectbox>div>div,
+.stNumberInput>div>div {
+    background-color: #1A202C;
+    color: #E2E8F0;
+    border-color: #4A5568;
+}
+
+input {
+    color: #E2E8F0;
+}
+
+/* Alerts */
+.stAlert {
+    background-color: #1A202C;
+    color: #E2E8F0;
+    border: 1px solid #2D3748;
+}
+
+/* Buttons */
+.stButton>button {
+    background-color: #2B6CB0;
+    color: white;
+    border: none;
+}
+
+.stButton>button:hover {
+    background-color: #3182CE;
+}
+
+/* Footer */
+.footer {
+    border-top-color: #2D3748;
+    color: #718096;
+}
