@@ -25,4 +25,4 @@ RUN mkdir -p data/raw data/processed models logs
 EXPOSE 8000 8501
 
 # Default command
-CMD ["sh", "-c", "uvicorn src.api.main:app --host 0.0.0.0 --port 8000 & streamlit run src/ui/app.py --server.port 8501"]
+CMD ["sh", "-c", "uvicorn src.api.main:app --host 0.0.0.0 --port 8000 & streamlit run src/streamlit_app/main.py --server.port 8501 --server.address 0.0.0.0"]

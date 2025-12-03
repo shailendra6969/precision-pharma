@@ -3,6 +3,10 @@ Configuration constants for Precision Pharma AI Platform.
 """
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Project Root
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -16,8 +20,14 @@ PROCESSED_DATA_DIR = DATA_DIR / "processed"
 MODELS_DIR = PROJECT_ROOT / "models"
 
 # External API Configuration
-CLINVAR_API_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
-GNOMAD_API_URL = "https://gnomad.broadinstitute.org/api"
+# External API Configuration
+CLINVAR_API_URL = os.getenv("CLINVAR_API_URL", "https://eutils.ncbi.nlm.nih.gov/entrez/eutils")
+GNOMAD_API_URL = os.getenv("GNOMAD_API_URL", "https://gnomad.broadinstitute.org/api")
+OPENFDA_EVENT_URL = os.getenv("OPENFDA_EVENT_URL", "https://api.fda.gov/drug/event.json")
+OPENFDA_LABEL_URL = os.getenv("OPENFDA_LABEL_URL", "https://api.fda.gov/drug/label.json")
+MYGENE_URL = os.getenv("MYGENE_URL", "https://mygene.info/v3/query")
+DGIDB_URL = os.getenv("DGIDB_URL", "https://dgidb.org/api/graphql")
+PUBCHEM_URL = os.getenv("PUBCHEM_URL", "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name")
 
 # Fallback/Mock Data (Minimal set for testing/offline mode)
 MOCK_CLINVAR_FALLBACK = {

@@ -65,6 +65,15 @@ class KnowledgeGraphManager:
     def close(self):
         """Close database connection."""
         self.driver.close()
+        
+    def verify_connection(self) -> bool:
+        """Verify that the connection to Neo4j is active."""
+        try:
+            self.driver.verify_connectivity()
+            return True
+        except Exception as e:
+            logger.error(f"Failed to verify Neo4j connection: {e}")
+            return False
     
     def clear_database(self):
         """Clear all nodes and relationships (for testing)."""

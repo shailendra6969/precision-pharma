@@ -1,6 +1,10 @@
 import streamlit as st
 import sys
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Add project root to path
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
